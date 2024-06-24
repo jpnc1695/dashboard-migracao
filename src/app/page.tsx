@@ -16,6 +16,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import Typography from "@mui/material/Typography";
 import Link from "next/link";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { signIn } from "next-auth/react";
 
 function Copyright(props: any) {
   return (
@@ -153,6 +154,7 @@ const SignInSide = () => {
                     variant={"contained"}
                     color={"primary"}
                     sx={{ mt: 1, mb: 1 }}
+                    onClick={() => signIn("github", {callbackUrl:"/dashBoard"})}
                     fullWidth
                   >
                     {`Logar com ${name}`}
