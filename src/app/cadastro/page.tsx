@@ -13,7 +13,7 @@ const btnstyle = {
 
 const paperStyle = {
   padding: 20,
-  height: "55vh",
+  height: "75%",
   width: 500,
   margin: "20px auto",
   backgroundColor: "rgba(255,255,255,0.9)",
@@ -70,13 +70,13 @@ const Cadastro = () => {
         style={containerStyle}
         container
         component="main"
-        sx={{ height: "100vh" }}
+        sx={{ height: "100" }}
       >
         <Paper elevation={10} style={paperStyle}>
           <TextField
             label="E-mail"
             placeholder="Digite seu e-mail"
-            sx={{ mt: 1, mb: 1 }}
+            // sx={{ mt: 1, mb: 1 }}
             type="email"
             fullWidth
             required
