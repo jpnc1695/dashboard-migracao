@@ -25,6 +25,8 @@ import { redirect } from "next/navigation";
 import Chart from './Chart';
 import Deposits from './Deposits';
 import Orders from './Orders';
+import { useState } from "react";
+
 
 function Copyright(props: any) {
     return (
@@ -96,7 +98,7 @@ const defaultTheme = createTheme();
 
 export default function DashboardPage() {
 
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = useState(true);
   const toggleDrawer = () => {
     setOpen(!open);
   };
