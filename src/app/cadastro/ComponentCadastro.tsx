@@ -1,6 +1,6 @@
 "use client";
 import * as React from "react";
-import { Visibility, VisibilityOff } from "@mui/icons-material";
+import { Password, Visibility, VisibilityOff } from "@mui/icons-material";
 import {
   Button,
   FormControl,
@@ -11,20 +11,14 @@ import {
   Link,
   OutlinedInput,
   Paper,
-  TextField,
   Typography,
-  FormGroup 
 } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import CssBaseline from "@mui/material/CssBaseline";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import {CreateUser} from "./actions"
-
-
-const btnstyle = {
-  margin: "8px 0",
-};
+import { CreateUser } from "./actions";
+import { toast } from "react-hot-toast";
 
 const paperStyle = {
   padding: 20,
@@ -69,7 +63,7 @@ export default function CadastroComponente() {
   const [showPassword, setShowPassword] = useState(false);
   const [passWord, setPassWord] = useState("");
   const [confirmPassWord, setConfirmPassWord] = useState("");
-  const [email, setEmail] = useState("")
+  const [email, setEmail] = useState("");
   // prima.User.findMany();
 
   const stateEmail = (e: React.ChangeEvent<any>): void => {
@@ -89,10 +83,6 @@ export default function CadastroComponente() {
     event.preventDefault();
   };
 
-  const teste = (x:string, y:string)=>{
-      console.log(`email:${x} senha:${y}`)
-  }
-
   return (
     <Grid
       container
@@ -106,18 +96,17 @@ export default function CadastroComponente() {
         component="main"
         sx={{ height: "100" }}
       >
-        <Paper elevation={10} style={paperStyle}>      
-        <FormControl
+        <Paper elevation={10} style={paperStyle}>
+          <FormControl
             fullWidth
             sx={{ mt: 1, mb: 1 }}
             variant="outlined"
             onChange={stateEmail}
           >
-            <InputLabel htmlFor="outlined-adornment-password">E-mail</InputLabel>
-            <OutlinedInput
-              type='email'
-              label="E-mail"
-            />
+            <InputLabel htmlFor="outlined-adornment-password">
+              E-mail
+            </InputLabel>
+            <OutlinedInput type="email" label="E-mail" />
           </FormControl>
           <FormControl
             fullWidth
@@ -182,8 +171,18 @@ export default function CadastroComponente() {
               type="submit"
               color="primary"
               variant="contained"
-              style={btnstyle}
-              onClick={() => {CreateUser(email, passWord)}}
+              onClick={async() => {
+                const result = await CreateUser(email, passWord)
+
+                if(result == 'P2002'){
+                  toast.error('E-mail já cadastrado')
+                }else{
+                  toast.success( "Usuário criado com sucesso.")
+                  console.log(result)
+
+                }
+              }}
+              sx={{margin: "8px 0"}}
               fullWidth
             >
               Cadastrar
@@ -194,7 +193,7 @@ export default function CadastroComponente() {
               }}
               type="submit"
               variant="contained"
-              style={btnstyle}
+              sx={{margin: "8px 0"}}
               fullWidth
             >
               Voltar
@@ -202,7 +201,6 @@ export default function CadastroComponente() {
           </FormControl>
           <Copyright sx={{ mt: 5 }} />
         </Paper>
-       
       </Grid>
     </Grid>
   );
