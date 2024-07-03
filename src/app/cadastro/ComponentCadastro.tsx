@@ -175,7 +175,7 @@ export default function CadastroComponente() {
                 const result = await CreateUser(email, passWord)
 
                 if(result == 'P2002'){
-                  toast.error('E-mail já cadastrado')
+                  toast.error('E-mail já cadastrado' )
                 }else{
                   toast.success( "Usuário criado com sucesso.")
                   console.log(result)
