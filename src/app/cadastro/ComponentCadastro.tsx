@@ -83,6 +83,26 @@ export default function CadastroComponente() {
     event.preventDefault();
   };
 
+  const verificacaoSenhaEEmail = (
+    emailUsuario: string,
+    senhaUsuario: string,
+    confirmarEmailUsuario: string
+  ) => {
+    const validarEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+
+    if (!validarEmail.test(emailUsuario)) {
+      toast.error("E-mail inserido de formar errada, por favor verifique");
+      return false;
+    }
+
+    if (senhaUsuario !== confirmarEmailUsuario) {
+      toast.error("As senhas não estão iguais, por favor verifique.");
+      return false;
+    }
+
+    return true;
+  };
+
   return (
     <Grid
       container
@@ -171,18 +191,20 @@ export default function CadastroComponente() {
               type="submit"
               color="primary"
               variant="contained"
-              onClick={async() => {
-                const result = await CreateUser(email, passWord)
-
-                if(result == 'P2002'){
-                  toast.error('E-mail já cadastrado' )
-                }else{
-                  toast.success( "Usuário criado com sucesso.")
-                  console.log(result)
-
+              onClick={async () => {
+                if (verificacaoSenhaEEmail(email, passWord, confirmPassWord) == false ) {
+                  return;
+                } else {
+                  const result = await CreateUser(email, passWord);
+                  if (result == "P2002") {
+                    toast.error("E-mail já cadastrado");
+                  } else {
+                    toast.success("Usuário criado com sucesso.");
+                    console.log(result);
+                  }
                 }
               }}
-              sx={{margin: "8px 0"}}
+              sx={{ margin: "8px 0" }}
               fullWidth
             >
               Cadastrar
@@ -193,7 +215,7 @@ export default function CadastroComponente() {
               }}
               type="submit"
               variant="contained"
-              sx={{margin: "8px 0"}}
+              sx={{ margin: "8px 0" }}
               fullWidth
             >
               Voltar
