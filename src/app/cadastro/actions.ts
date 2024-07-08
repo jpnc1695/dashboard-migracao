@@ -1,5 +1,5 @@
 "use server";
-import { Prisma, PrismaClient } from "@prisma/client";
+import { Prisma } from "@prisma/client";
 import prisma from "../lib/db";
 
 export async function CreateUser(
@@ -16,7 +16,6 @@ export async function CreateUser(
   } catch (error) {
     if (error instanceof Prisma.PrismaClientKnownRequestError) {
       if (error.code === "P2002") {
-        // toast.error("E-mail já cadastrado para um usuário.")
         console.log(error.code);
         return error.code;
       }

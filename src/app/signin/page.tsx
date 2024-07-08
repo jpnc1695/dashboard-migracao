@@ -107,7 +107,8 @@ const SignInSide = () => {
                 required
                 fullWidth
                 id="email"
-                label="Digite seu Email"
+                type="email"
+                label="Digite seu E-mail"
                 name="email"
                 autoComplete="email"
                 autoFocus
@@ -117,7 +118,7 @@ const SignInSide = () => {
                 required
                 fullWidth
                 name="password"
-                label="Digite sua senha "
+                label="Digite sua Senha "
                 type="password"
                 id="password"
                 autoComplete="current-password"
