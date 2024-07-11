@@ -192,7 +192,7 @@ export default function CadastroComponente() {
               color="primary"
               variant="contained"
               onClick={async () => {
-                if (verificacaoSenhaEEmail(email, passWord, confirmPassWord) == false ) {
+                if (!verificacaoSenhaEEmail(email, passWord, confirmPassWord)) {
                   return;
                 } else {
                   const result = await CreateUser(email, passWord);
