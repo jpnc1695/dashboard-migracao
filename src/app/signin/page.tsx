@@ -11,12 +11,15 @@ import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
-// import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Typography from "@mui/material/Typography";
 import Link from "next/link";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { signIn } from "next-auth/react";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
+
 
 function Copyright(props: any) {
   return (
@@ -50,15 +53,20 @@ const supportedSocialLoginTypes = [
 ];
 
 const SignInSide = () => {
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log(data.get);
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
-    });
+
+  const [email, setEmail] = useState("");
+  const [passWord, setPassWord] = useState("");
+
+  
+  const stateEmail = (e: React.ChangeEvent<any>): void => {
+    setEmail(e.target.value);
   };
+
+  const stateSenha = (e: React.ChangeEvent<any>): void => {
+    setPassWord(e.target.value);
+  };
+
+const router = useRouter()
 
   return (
     <ThemeProvider theme={defaultTheme}>
@@ -99,7 +107,6 @@ const SignInSide = () => {
             <Box
               component="form"
               noValidate
-              onSubmit={handleSubmit}
               sx={{ mt: 1 }}
             >
               <TextField
@@ -111,6 +118,7 @@ const SignInSide = () => {
                 label="Digite seu E-mail"
                 name="email"
                 autoComplete="email"
+                onChange={stateEmail}
                 autoFocus
               />
               <TextField
@@ -121,6 +129,7 @@ const SignInSide = () => {
                 label="Digite sua Senha "
                 type="password"
                 id="password"
+                onChange={stateSenha}
                 autoComplete="current-password"
               />
               <FormControlLabel
@@ -132,6 +141,17 @@ const SignInSide = () => {
                   type="submit"
                   fullWidth
                   variant="contained"
+                  onClick={async () => {
+                    const res = await signIn("credentials", {email:email, senha:passWord})
+
+                    if(res?.error){
+                      toast.error("Erro no Login");
+
+                    }else{
+                      router.push("dashBoard")
+                    }
+
+                  }}
                   sx={{ mt: 3, mb: 2 }}
                 >
                   Entrar

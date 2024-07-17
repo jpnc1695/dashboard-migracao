@@ -2,11 +2,10 @@ import NextAuth from "next-auth";
 import GitHubProvider from "next-auth/providers/github";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { PrismaClient } from "@prisma/client";
+import bcrypt from "bcrypt"
+
 
 const prisma = new PrismaClient()
-
-
-
 
 const handler = NextAuth({
   providers: [
@@ -21,24 +20,35 @@ const handler = NextAuth({
           senha: { },
         },  
         async authorize(credentials, req): Promise<any> {
-          const user = await prisma.user.findUnique({
-              where:{
-                email: credentials?.email
-              }
-          })
 
-          if(!user || !user.senha){
-            throw new Error("Usuário não encontrado.")
-          }else{
-            console.log(user)
-          }
+
+          if(!credentials?.email || !credentials?.senha) throw new Error("Dados de Login necessarios")
+
+            const user = await prisma.user.findUnique({
+                where:{
+                    email: credentials?.email
+                }
+            })
+
+            console.log("USER", user)
+
+            if(!user || !user.senha) {
+                throw new Error("Usuários não registrado através de credenciais")
+            }
+            
+            if(user.senha !== credentials.senha){
+              throw new Error("Senha Incorreta")
+            }
+            // const matchPassword = await bcrypt.compare(credentials.senha, user.senha)
+            // if(!matchPassword)
+            //     throw new Error("Senha incorreta")
+
+            return user
+          
         },
         
       })
-  ],
-  pages:{
-    signIn:"/dashBoard"
-  }
+  ]
   })
   
   export {handler as GET, handler as POST}
