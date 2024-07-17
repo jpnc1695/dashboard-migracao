@@ -28,8 +28,8 @@
 ## Descrição do projeto 
 
 <p align="justify">
- Aplicação desenvolvida pra adminstração de compras e vendas para uma empresa, além de análise e comparativos dos dados armazenados no banco de dados.
- Além de tela de login e controle de nivel de acesso para usuários.
+ Aplicação desenvolvida pra adminstração de compras e vendas para uma empresa, além de análise e comparativos dos dados armazenados no banco de dados 
+ e tela de login e controle de nivel de acesso para usuários.
 </p>
 
 ## Funcionalidades
