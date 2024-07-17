@@ -3,7 +3,13 @@
 <p >
 <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"/>
 <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white"/>
-<img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"/></br>
+<img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"/>
+<img src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white"/>
+<img src="https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white"/>
+<img src="https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens"/>
+<img src="https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white"/></br>
+
+
 <img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=RED&style=for-the-badge"/>
 
 </p>
@@ -28,20 +34,27 @@
 ## Descrição do projeto 
 
 <p align="justify">
- Aplicação desenvolvida pra adminstração de compras e vendas para uma empresa, além de análise e comparativos dos dados armazenados no banco de dados 
+ Aplicação desenvolvida pra adminstração de compras e vendas para uma empresa, 
+ além de análise e comparativos dos dados armazenados no banco de dados 
  e tela de login e controle de nivel de acesso para usuários.
 </p>
 
 ## Funcionalidades
 
 :heavy_check_mark: Cadastro e criação de compras e vendas para uma empresa, criação de gráficos e tabelas para analises comparativas, 
-criação de usuários com diferentes níveis de autorição no projeto e controle de acesso através a DashBoard com uma tela de login.
+criação de usuários com diferentes níveis de autorição no projeto e controle de acesso através a DashBoard com uma tela de login com
+acesso via usando os provedores do GitHub ou CredentialsProvider do NextAuth.
 
 ## Layout do projeto :dash:
 
-<img src="https://github.com/jpnc1695/devnology/blob/master/public/img/primeira_pagina_1.png?raw=true" width=500vh> 
+<!--<img src="https://github.com/jpnc1695/dashboard-migracao/blob/master/public/Login.png?raw=true" width=500vh> -->
+![2024-07-17 16-20-08](https://github.com/user-attachments/assets/6e14d1f5-457e-4d0e-aad2-0c51c746fb19)
 
-<img src="https://github.com/jpnc1695/devnology/blob/master/public/img/primeira_pagina_2.png?raw=true" width=500vh> 
+![2024-07-17 16-24-58](https://github.com/user-attachments/assets/a31ce325-fca3-4ed9-af1d-64e75a31606d)
+
+<!--<img src="https://github.com/jpnc1695/dashboard-migracao/blob/master/public/Cadastro.png?raw=true" width=500vh> -->
+
+<!--<img src="https://github.com/jpnc1695/dashboard-migracao/blob/master/public/DashBoard.png?raw=true" width=500vh> -->
 
 
 ## Como rodar a aplicação :arrow_forward:
@@ -50,16 +63,15 @@ criação de usuários com diferentes níveis de autorição no projeto e contro
 ### 1) Clone o repositorio, instale os pacotes do Node e verifique as rotas
 
 ``` 
-//on local
-git clone https://github.com/jpnc1695/devnology
-cd devnology
+git clone https://github.com/jpnc1695/dashboard-migracao.git
+cd dashboard-migracao
 npm install
 npm start
 ``` 
 Abra o seu browser e verifique se o apiExpressMongo está funcionando acessando:</br>
 `http://localhost:3000/`   
-`http://localhost:3000/links`   
-`http://localhost:3000/tags`   
+`http://localhost:3000/dashBoard`   
+`http://localhost:3000/cadastro`   
 
 ## Linguagens, dependencias e libs utilizadas :books:
 
