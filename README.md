@@ -61,10 +61,6 @@ Abra o seu browser e verifique se o apiExpressMongo está funcionando acessando:
 `http://localhost:3000/links`   
 `http://localhost:3000/tags`   
 
-
-## Método 2: Pelo Vercel
- <a href="https://devnology-6olb.vercel.app/" target="_blank"> Deploy Vercel<a/>
-
 ## Linguagens, dependencias e libs utilizadas :books:
 
 - ``TypeScript``
