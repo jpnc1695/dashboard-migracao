@@ -37,8 +37,6 @@
 :heavy_check_mark: Cadastro e criação de compras e vendas para uma empresa, criação de gráficos e tabelas para analises comparativas, 
 criação de usuários com diferentes níveis de autorição no projeto e controle de acesso através a DashBoard com uma tela de login.
 
-:heavy_check_mark: Importação de Links
-
 ## Layout do projeto :dash:
 
 <img src="https://github.com/jpnc1695/devnology/blob/master/public/img/primeira_pagina_1.png?raw=true" width=500vh> 
