@@ -1,5 +1,5 @@
 
-<h1>Banco de Links</h1> 
+<h1>Aplicativo para adminstração e compras e vendas.</h1> 
 <p >
 <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"/>
 <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white"/>
@@ -28,12 +28,14 @@
 ## Descrição do projeto 
 
 <p align="justify">
- Template feito para gerenciar dados e requisições de uma Api
+ Aplicação desenvolvida pra adminstração de compras e vendas para uma empresa, além de análise e comparativos dos dados armazenados no banco de dados.
+ Além de tela de login e controle de nivel de acesso para usuários.
 </p>
 
 ## Funcionalidades
 
-:heavy_check_mark: Criação, edição e exclusão de Links.
+:heavy_check_mark: Cadastro e criação de compras e vendas para uma empresa, criação de gráficos e tabelas para analises comparativas, 
+criação de usuários com diferentes níveis de autorição no projeto e controle de acesso através a DashBoard com uma tela de login.
 
 :heavy_check_mark: Importação de Links
 
@@ -70,8 +72,11 @@ Abra o seu browser e verifique se o apiExpressMongo está funcionando acessando:
 - ``TypeScript``
 - ``ReactJs``
 - ``Material UI (Mui)``
-- ``Axios``
-- ``Node Js``
+- ``NextJs``
+- ``Node``
+- ``Prisma``
+- ``JWT``
+- ``BCrypt``
 
 ## Desenvolvedor:octocat:
 | [<img src="https://avatars.githubusercontent.com/u/84605494?v=4" width=115><br><sub>João Paulo N Costa</sub>](https://github.com/jpnv1695) |  
@@ -82,6 +87,6 @@ Abra o seu browser e verifique se o apiExpressMongo está funcionando acessando:
 
 The [Git hub]() (Git Hub)
 
-Copyright :copyright: 2022 - Bnco de Links
+Copyright :copyright: 2024 -ADM DE COMPRAS E VENDAS
 
 
