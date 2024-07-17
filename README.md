@@ -39,9 +39,11 @@ criação de usuários com diferentes níveis de autorição no projeto e contro
 
 ## Layout do projeto :dash:
 
-<img src="https://github.com/jpnc1695/devnology/blob/master/public/img/primeira_pagina_1.png?raw=true" width=500vh> 
+<img src="https://github.com/jpnc1695/dashboard-migracao/blob/master/public/Login.png?raw=true" width=500vh> 
 
-<img src="https://github.com/jpnc1695/devnology/blob/master/public/img/primeira_pagina_2.png?raw=true" width=500vh> 
+<img src="https://github.com/jpnc1695/dashboard-migracao/blob/master/public/Cadastro.png?raw=true" width=500vh> 
+
+<img src="https://github.com/jpnc1695/dashboard-migracao/blob/master/public/DashBoard.png?raw=true" width=500vh> 
 
 
 ## Como rodar a aplicação :arrow_forward:
