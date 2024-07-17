@@ -34,14 +34,16 @@
 ## Descrição do projeto 
 
 <p align="justify">
- Aplicação desenvolvida pra adminstração de compras e vendas para uma empresa, além de análise e comparativos dos dados armazenados no banco de dados 
+ Aplicação desenvolvida pra adminstração de compras e vendas para uma empresa, 
+ além de análise e comparativos dos dados armazenados no banco de dados 
  e tela de login e controle de nivel de acesso para usuários.
 </p>
 
 ## Funcionalidades
 
 :heavy_check_mark: Cadastro e criação de compras e vendas para uma empresa, criação de gráficos e tabelas para analises comparativas, 
-criação de usuários com diferentes níveis de autorição no projeto e controle de acesso através a DashBoard com uma tela de login.
+criação de usuários com diferentes níveis de autorição no projeto e controle de acesso através a DashBoard com uma tela de login com
+acesso via usando os provedores do GitHub ou CredentialsProvider do NextAuth.
 
 ## Layout do projeto :dash:
 
@@ -58,16 +60,15 @@ criação de usuários com diferentes níveis de autorição no projeto e contro
 ### 1) Clone o repositorio, instale os pacotes do Node e verifique as rotas
 
 ``` 
-//on local
-git clone https://github.com/jpnc1695/devnology
-cd devnology
+git clone https://github.com/jpnc1695/dashboard-migracao.git
+cd dashboard-migracao
 npm install
 npm start
 ``` 
 Abra o seu browser e verifique se o apiExpressMongo está funcionando acessando:</br>
 `http://localhost:3000/`   
-`http://localhost:3000/links`   
-`http://localhost:3000/tags`   
+`http://localhost:3000/dashBoard`   
+`http://localhost:3000/cadastro`   
 
 ## Linguagens, dependencias e libs utilizadas :books:
 
