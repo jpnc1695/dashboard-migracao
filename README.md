@@ -10,7 +10,6 @@
 <img src="https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white"/></br>
 
 
-
 <img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=RED&style=for-the-badge"/>
 
 </p>
@@ -48,13 +47,14 @@ acesso via usando os provedores do GitHub ou CredentialsProvider do NextAuth.
 
 ## Layout do projeto :dash:
 
-<img src="https://github.com/jpnc1695/dashboard-migracao/blob/master/public/Login.png?raw=true" width=500vh> 
+<!--<img src="https://github.com/jpnc1695/dashboard-migracao/blob/master/public/Login.png?raw=true" width=500vh> -->
+![2024-07-17 16-20-08](https://github.com/user-attachments/assets/6e14d1f5-457e-4d0e-aad2-0c51c746fb19)
 
 ![2024-07-17 16-24-58](https://github.com/user-attachments/assets/a31ce325-fca3-4ed9-af1d-64e75a31606d)
 
-<img src="https://github.com/jpnc1695/dashboard-migracao/blob/master/public/Cadastro.png?raw=true" width=500vh> 
+<!--<img src="https://github.com/jpnc1695/dashboard-migracao/blob/master/public/Cadastro.png?raw=true" width=500vh> -->
 
-<img src="https://github.com/jpnc1695/dashboard-migracao/blob/master/public/DashBoard.png?raw=true" width=500vh> 
+<!--<img src="https://github.com/jpnc1695/dashboard-migracao/blob/master/public/DashBoard.png?raw=true" width=500vh> -->
 
 
 ## Como rodar a aplicação :arrow_forward:
