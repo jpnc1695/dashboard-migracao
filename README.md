@@ -67,7 +67,13 @@ git clone https://github.com/jpnc1695/dashboard-migracao.git
 cd dashboard-migracao
 npm install
 npm start
-``` 
+```
+## Método 2: Pelo Vercel 
+link: <https://admincompras.vercel.app> </br>
+</br>
+
+## Testando
+
 Abra o seu browser e verifique se o apiExpressMongo está funcionando acessando:</br>
 `http://localhost:3000/`   
 `http://localhost:3000/dashBoard`   
